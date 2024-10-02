@@ -2,19 +2,19 @@
 
 SECONDS=0
 
-#export PATH=/home/rsharma3/DrAftab/Dr_Aftab/samtools-1.17/:$PATH
-#export PATH=/home/rsharma3/DrAftab/Dr_Aftab/subread-2.0.6-Linux-x86_64/bin/:$PATH
+#export PATH=/home/DrAftab/Dr_Aftab/samtools-1.17/:$PATH
+#export PATH=/home/DrAftab/Dr_Aftab/subread-2.0.6-Linux-x86_64/bin/:$PATH
 
 #WORKING DIRECTORY
-cd /home/rsharma3/DrAftab/Dr_Aftab/FastqData
+cd /home/DrAftab/Dr_Aftab/FastqData
 
 # Define the directory containing FASTQ files
-FASTQ_DIR="/home/rsharma3/DrAftab/Dr_Aftab/FastqData/"
+FASTQ_DIR="/home/DrAftab/Dr_Aftab/FastqData/"
 
 # Define the output directory for FastQC results
-OUTPUT_DIR="/home/rsharma3/DrAftab/Dr_Aftab/Output"
-HISAT_DIR="/home/rsharma3/DrAftab/Dr_Aftab/FastqData/Hisat"
-FINAL_OUTPUT="/home/rsharma3/DrAftab/Dr_Aftab/FastqData/TxtOutput"
+OUTPUT_DIR="/home/DrAftab/Dr_Aftab/Output"
+HISAT_DIR="/home/DrAftab/Dr_Aftab/FastqData/Hisat"
+FINAL_OUTPUT="/home/DrAftab/Dr_Aftab/FastqData/TxtOutput"
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
 mkdir -p "$HISAT_DIR"
@@ -51,7 +51,7 @@ mkdir -p "$FINAL_OUTPUT"
 
 # run alignment
 #hisat2 -q --rna-strandness R -x Hisat/grch38/genome -U Data/SRR25915982_1_trimmed.fastq | samtools sort -o Hisat/SRR25915982_1_trimmed.bam
-hisat2 -q --rna-strandness R -x Hisat/grch38/genome -U /home/rsharma/DrAftab/Dr_Aftab/FastqData/Data/SRR25915982_1_trimmed.fastq | samtools sort -o \/home/rsharma3/DrAftab/Dr_Aftab/FastqData/Hisat/SRR25915982_1_trimmed.bam
+hisat2 -q --rna-strandness R -x Hisat/grch38/genome -U /home/DrAftab/Dr_Aftab/FastqData/Data/SRR25915982_1_trimmed.fastq | samtools sort -o \/home/DrAftab/Dr_Aftab/FastqData/Hisat/SRR25915982_1_trimmed.bam
 
 
 echo "HISAT2 finished running!"
